@@ -52,10 +52,11 @@
 .hero {
   &__title {
     font-size: 64px;
-    max-width: 893px;
+
     margin-right: 2rem;
     line-height: 112%;
-    word-break: break-all;
+    hyphens: auto;
+
     @include media(xl) {
       font-size: 40px;
       margin: 0 1rem 0 0;

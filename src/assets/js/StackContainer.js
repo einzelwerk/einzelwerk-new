@@ -15,7 +15,7 @@ mm.add(breakpoints.isDesktop, () => {
         pinSpacing: false,
         pin: false,
         scrub: true,
-        markers: true,
+
         onRefresh: () => gsap.set(panel, { transformOrigin: "center " + (panel.offsetHeight - window.innerHeight / 2) + "px" }),
       },
     });

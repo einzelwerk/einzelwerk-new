@@ -1,3 +1,5 @@
+@use "../utils/mixins" as *;
+
 .thank-you {
   &__title {
     font-size: 64px;
@@ -5,5 +7,11 @@
     margin-bottom: 60px;
     line-height: 112%;
     max-width: 660px;
+    @include media(md) {
+      font-size: 40px;
+    }
+    @include media(xs) {
+      font-size: 32px;
+    }
   }
 }
