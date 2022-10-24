@@ -1,0 +1,32 @@
+@use "../utils/mixins" as *;
+
+.services-offer {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1127px;
+  justify-content: space-between;
+  margin: 80px 0 0;
+  @include media(md) {
+    margin: 40px 0 0;
+  }
+  &.before-stack {
+    margin: 80px 0;
+    @include media(md) {
+      margin: 40px 0 60px;
+    }
+  }
+  &__title {
+    color: var(--gray500);
+    line-height: 150%;
+  }
+  &__desc {
+    max-width: 660px;
+    line-height: 150%;
+    font-size: 20px;
+    font-family: var(--font);
+    @include media(md) {
+      font-size: 16px;
+      margin-top: 16px;
+    }
+  }
+}

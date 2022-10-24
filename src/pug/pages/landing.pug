@@ -1,0 +1,23 @@
+include ../inc/mixins/svg-sprite
+include ../inc/mixins/include
+
+include ../inc/layout/preloader.pug
+include ../inc/layout/header.pug
+#smooth-wrapper 
+  #smooth-content
+    main.main
+      -var color =  '#4655D8'
+      -var image = '/src/assets/images/landing.png'
+      -var imageM = '/src/assets/images/landing-m.png'
+      -var title = 'Лендинги'
+      include ../inc/blocks/services-hero.pug
+      -var bottomspace = true;
+      include ../inc/blocks/services-features.pug
+
+      include ../inc/blocks/black-bg-block.pug
+      include ../inc/blocks/portfolio.pug
+      include ../inc/blocks/work-progress.pug
+      include ../inc/blocks/cta.pug
+      include ../inc/blocks/services-more.pug
+    include ../inc/layout/footer.pug
+include ../inc/blocks/modal.pug

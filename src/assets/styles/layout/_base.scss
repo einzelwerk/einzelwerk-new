@@ -1,0 +1,141 @@
+@use "../utils/mixins" as *;
+@use "../utils/vars" as *;
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#smooth-content {
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+
+.root {
+  overflow-x: hidden;
+}
+
+.main {
+  margin-top: 86px;
+  position: relative;
+  @include media(md) {
+    margin-top: 64px;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: calc(var(--gap));
+    width: 1px;
+    height: 100%;
+    display: block;
+    background: var(--gray200);
+    z-index: -1;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: calc(var(--gap));
+    width: 1px;
+    height: 100%;
+    display: block;
+    background: var(--gray200);
+    z-index: -1;
+  }
+}
+
+picture {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+body {
+  box-sizing: border-box;
+  background: var(--white);
+  color: var(--text);
+  font-family: var(--font2), Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  min-width: 320px;
+  overflow-x: hidden;
+  @include media(md) {
+    font-size: 16px;
+  }
+}
+
+.oh {
+  overflow: hidden;
+}
+
+.container {
+  max-width: var(--container);
+  margin: auto;
+  width: 100%;
+  padding: 0 var(--gap);
+
+  &--lines {
+    position: relative;
+    &:before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: var(--gap);
+      width: 1px;
+      height: 100%;
+      display: block;
+      background: var(--gray200);
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: var(--gap);
+      width: 1px;
+      height: 100%;
+      display: block;
+      background: var(--gray200);
+    }
+  }
+}
+
+.section {
+  padding-top: var(--gap-y);
+  &--bottom-space {
+    --gap-y: 120px;
+    padding-bottom: var(--gap-y);
+  }
+  &--80 {
+    --gap-y: 80px !important;
+  }
+  &--100 {
+    padding-top: 100px;
+    @include media(md) {
+      padding-top: 40px;
+    }
+  }
+  &:last-child {
+    padding-bottom: var(--gap-y);
+  }
+}
+
+.hidden-desktop {
+  @include media(lg, min-width) {
+    display: none;
+  }
+}
+
+.hidden-mobile {
+  @include media(lg) {
+    display: none;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

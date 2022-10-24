@@ -1,0 +1,72 @@
+@use "../utils/vars" as *;
+
+.btn {
+  padding: 18.5px 48px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  font-weight: 500;
+  transition: color 800ms;
+
+  span {
+    position: relative;
+    z-index: 2;
+  }
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: var(--black);
+    border-radius: 50%;
+  }
+  &:before {
+    left: -20px;
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    right: -20px;
+    transform: translate(50%, -50%);
+  }
+  &:hover {
+    color: var(--white);
+    &:before {
+      animation: criss-cross-left 0.8s both;
+
+      animation-direction: alternate;
+    }
+    &:after {
+      animation: criss-cross-right 0.8s both;
+
+      animation-direction: alternate;
+    }
+  }
+
+  &--primary {
+    background: var(--green);
+    .inner-text,
+    a,
+    span {
+      position: relative;
+      z-index: 2;
+    }
+  }
+  &--secondary {
+    border: 1px solid var(--gray200);
+    &:hover {
+      a,
+      span,
+      .inner-text {
+        color: var(--white);
+        position: relative;
+        z-index: 2;
+      }
+    }
+    span,
+    a {
+      color: var(--black);
+    }
+  }
+}

@@ -1,0 +1,47 @@
+section.container.container--lines.section
+  if manager
+    .cta-heading 
+      h2.section-title.title.cta-title= ctaTitle
+      .cta-manager
+        .cta-manager__image 
+          img.cta-manager__image-src(src="/src/assets/images/manager.jpg" alt="")
+        .cta-manager__info 
+          h6.cta-manager__name Марк Левшиц
+          .cta-manager__text Ваш проектный менеджер, сопровождение проекта и консультации
+  else
+
+    if ctaTitle
+      h2.section-title.title.cta-title= ctaTitle
+    else 
+      h2.section-title.title.cta-title Оставляйте заявочку
+  .cta 
+    form.cta-form.form(action="")
+      label.form__label
+        input.form__input(type="text" placeholder="Ваше имя*")
+      label.form__label
+        input.form__input(type="text" placeholder="Компания/проект*")
+      label.form__label
+        input.form__input(type="text" placeholder="Эл. почта*")
+      label.form__label
+        input.form__input(type="text" placeholder="Телефон/мессенджер*")
+      label.form__label.form__label--full
+        input.form__input(type="text" placeholder="Бюджет")
+      .form__block-attachment
+        label.form__label.form__label--full
+          textarea.form__input.form__input--textarea( placeholder="Расскажите о проекте")
+        label.form__label.form__label--file
+          input.form__input.form__input--file.js-file(type="file" multiple)
+      span.files-list.js-file-output
+      .form__block-bottom
+        label.form__label.form__label--full
+          input.form__input.form__input--checkbox(type="checkbox" checked)
+          .form__checkbox-wrapper
+            .form__fake-checkbox 
+            span.form__checkbox-text Я согласен с условиями 
+              a.form__checkbox-link(href="/EW-frontend/policy.html") обработки персональных данных 
+        button.form__submit.btn.btn--primary
+          span  Отправить
+
+
+
+
