@@ -151,21 +151,21 @@ meter {
   font-style: normal;
   font-weight: 350;
   font-display: swap;
-  src: url("/EW-frontend/assets/fonts/Heading-Now-83-Book-.woff2") format("woff2"), url("/EW-frontend/assets/fonts/Heading-Now-83-Book-.woff") format("woff");
+  src: url("/einzelwerk-new/assets/fonts/Heading-Now-83-Book-.woff2") format("woff2"), url("/einzelwerk-new/assets/fonts/Heading-Now-83-Book-.woff") format("woff");
 }
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: url("/EW-frontend/assets/fonts/Montserrat-Regular-.woff2") format("woff2"), url("/EW-frontend/assets/fonts/Montserrat-Regular-.woff") format("woff");
+  src: url("/einzelwerk-new/assets/fonts/Montserrat-Regular-.woff2") format("woff2"), url("/einzelwerk-new/assets/fonts/Montserrat-Regular-.woff") format("woff");
 }
 @font-face {
   font-family: "Montserrat";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: url("/EW-frontend/assets/fonts/Montserrat-Medium-.woff2") format("woff2"), url("/EW-frontend/assets/fonts/Montserrat-Medium-.woff") format("woff");
+  src: url("/einzelwerk-new/assets/fonts/Montserrat-Medium-.woff2") format("woff2"), url("/einzelwerk-new/assets/fonts/Montserrat-Medium-.woff") format("woff");
 }
 .btn {
   padding: 18.5px 48px;
@@ -268,7 +268,7 @@ meter {
 .form__label--file {
   width: 20px;
   height: 20px;
-  background: url(/EW-frontend/assets/media/clip-2da39a43.svg);
+  background: url(/einzelwerk-new/assets/media/clip-2da39a43.svg);
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -308,7 +308,7 @@ meter {
   left: -99999px;
 }
 .form__input--checkbox:checked ~ .form__checkbox-wrapper .form__fake-checkbox {
-  background: url(/EW-frontend/assets/media/check-7ba76a96.svg);
+  background: url(/einzelwerk-new/assets/media/check-7ba76a96.svg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 16px;
@@ -791,7 +791,7 @@ img {
   content: "";
   width: 12px;
   height: 12px;
-  background: url(/EW-frontend/assets/media/arrow-down-5edda2c0.svg);
+  background: url(/einzelwerk-new/assets/media/arrow-down-5edda2c0.svg);
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
@@ -1710,7 +1710,7 @@ img {
 }
 
 .reviews:hover {
-  cursor: url(/EW-frontend/assets/media/cursor-move-61fadbe4.svg), auto;
+  cursor: url(/einzelwerk-new/assets/media/cursor-move-61fadbe4.svg), auto;
 }
 .reviews__item {
   display: flex;
