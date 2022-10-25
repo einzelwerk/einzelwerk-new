@@ -1,10 +1,15 @@
 @use "../utils/mixins" as *;
 
+.awards-wrapper {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
 .awards {
   display: flex;
   justify-content: space-between;
   background: var(--black);
   color: var(--white);
+  height: 800px;
   @include media(md) {
     flex-direction: column;
   }
@@ -17,8 +22,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 570px;
-    width: 100%;
+
     @include media(full) {
       padding-left: var(--gap);
     }
@@ -30,10 +34,9 @@
     }
   }
   &__image {
-    max-width: 1100px;
-    width: 100%;
+    width: 65%;
     @include media(md) {
-      padding:0 var(--gap) 60px;
+      padding: 0 var(--gap) 60px;
     }
   }
   &__image-src {

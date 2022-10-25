@@ -54,4 +54,17 @@ mm.add(breakpoints.isDesktop, () => {
     .to({}, { duration: 2 });
 });
 
+let tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".awards-wrapper",
+    end: "bottom bottom",
+    scrub: true,
+    markers: true,
+  },
+});
+
+tl.from(".awards-wrapper", {
+  clipPath: "polygon(50% 0, 50% 0, 50% 100%, 50% 100%)",
+});
+
 export default smoother;
