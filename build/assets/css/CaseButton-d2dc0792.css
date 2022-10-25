@@ -282,17 +282,23 @@ meter {
   padding-bottom: 24px;
   padding-left: 2px;
   box-sizing: border-box;
-  color: var(--gray300);
+  color: var(--gray500);
   letter-spacing: -0.015em;
   transition: color 300ms;
 }
-.form__input:focus {
-  color: var(--gray500);
+.form__input:focus::-moz-placeholder {
+  color: var(--gray300);
+}
+.form__input:focus::placeholder {
+  color: var(--gray300);
 }
 .form__input::-moz-placeholder {
+  -moz-transition: color 300ms;
+  transition: color 300ms;
   color: inherit;
 }
 .form__input::placeholder {
+  transition: color 300ms;
   color: inherit;
 }
 .form__input--file {
@@ -325,6 +331,9 @@ meter {
   vertical-align: middle;
   margin: 0 16px 0 0;
   flex: 0 0 auto;
+}
+.form__fake-checkbox:focus {
+  outline: 1px solid red;
 }
 .form__checkbox-wrapper {
   display: flex;
@@ -452,6 +461,9 @@ meter {
 
 * {
   box-sizing: border-box;
+}
+*:not(input, textarea):focus-visible {
+  outline: 2px solid rgb(49, 49, 49);
 }
 
 html {
@@ -1174,10 +1186,9 @@ img {
 
 .hero__title {
   font-size: 64px;
+  max-width: 893px;
   margin-right: 2rem;
   line-height: 112%;
-  -webkit-hyphens: auto;
-          hyphens: auto;
 }
 @media (max-width: 1200px) {
   .hero__title {
@@ -2781,6 +2792,7 @@ img {
   display: flex;
   justify-content: space-between;
   margin: 160px 0 80px 0;
+  font-family: var(--font);
 }
 @media (max-width: 768px) {
   .case-about {
@@ -2800,10 +2812,18 @@ img {
 .case-about .case-text {
   line-height: 133%;
   font-size: 32px;
+  width: 80%;
+}
+.case-about .case-text p {
+  margin-bottom: 30px;
+}
+.case-about .case-text p:last-child {
+  margin: 0;
 }
 @media (max-width: 768px) {
   .case-about .case-text {
     font-size: 20px;
+    width: 100%;
     font-family: var(--font);
   }
 }
