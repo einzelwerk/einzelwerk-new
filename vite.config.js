@@ -5,7 +5,7 @@ import { createSvgIconsPlugin } from "vite-plugin-svg-icons";
 import viteImagemin from "vite-plugin-imagemin";
 const ASSET_PATH = process.env.ASSET_PATH || "/";
 export default defineConfig({
-  base: "/einzelwerk-new/",
+  base: "/EW-frontend/",
   build: {
     outDir: "build",
     assetsDir: "assets",

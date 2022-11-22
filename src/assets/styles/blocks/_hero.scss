@@ -114,6 +114,7 @@
       margin: 40px 0 0;
     }
   }
+ 
   + .section {
     --gap-y: 120px;
     @include media(md) {
@@ -273,6 +274,8 @@
     }
   }
   &__desc-item {
+    margin-right: 1rem;
+    &:last-child {margin: 0;}
     @include media(md) {
       margin-bottom: 16px;
       &:last-child {

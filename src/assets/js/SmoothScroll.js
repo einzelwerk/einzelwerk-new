@@ -59,7 +59,7 @@ let tl = gsap.timeline({
     trigger: ".awards-wrapper",
     end: "bottom bottom",
     scrub: true,
-    markers: true,
+
   },
 });
 

@@ -1,4 +1,8 @@
 .timeline {
+  &:hover {
+    cursor: url(../../assets/images/cursor-move.svg), auto;
+  }
+
   &__item {
     padding: 40px;
     background: var(--gray50);

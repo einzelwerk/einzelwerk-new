@@ -30,7 +30,7 @@
       flex-direction: column;
       align-items: flex-end;
     }
-    @include media(md) {
+    @include media(lg) {
       margin: 0 23px 0 auto;
       font-size: 12px;
     }
