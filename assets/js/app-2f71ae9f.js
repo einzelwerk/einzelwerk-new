@@ -8143,14 +8143,15 @@ if (moreCaseContainer) {
 const timelineContainer = document.querySelector(".js-timeline-slider");
 if (timelineContainer) {
   new Swiper(timelineContainer, {
-    slidesPerView: 1.1,
-    spaceBetween: 40,
+    slidesPerView: 1.15,
+    spaceBetween: 16,
     breakpoints: {
       768: {
         slidesPerView: 2.2
       },
       1024: {
-        slidesPerView: 3.2
+        slidesPerView: 3.2,
+        spaceBetween: 40
       },
       1620: {
         slidesPerView: 4.2
@@ -10227,7 +10228,6 @@ mm.add(breakpoints.isDesktop, () => {
         pinSpacing: false,
         pin: false,
         scrub: true,
-        markers: true,
         onRefresh: () => gsapWithCSS.set(panel, { transformOrigin: "center " + (panel.offsetHeight - window.innerHeight / 2) + "px" })
       }
     });
